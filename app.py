@@ -3,7 +3,6 @@ from FlagEmbedding import BGEM3FlagModel
 from FlagEmbedding import FlagReranker
 import pandas as pd
 import numpy as np
-import pickle
 
 model = BGEM3FlagModel('BAAI/bge-m3',
                        use_fp16=True)
