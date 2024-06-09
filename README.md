@@ -1,2 +1,2 @@
 # ai-builder-bookguessing
-ai-builder Book Guessing proj.
+ai-builder Book Guessing proj. via BGE-m3 model
