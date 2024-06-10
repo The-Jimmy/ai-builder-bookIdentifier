@@ -11,6 +11,8 @@ reranker = FlagReranker('BAAI/bge-reranker-v2-m3', use_fp16=True)
 df = pd.read_csv('D:/AI_Builder/BookDataFrame.csv')
 embeddings_2 = np.load('D:/AI_Builder/BGE_embeddings_2.npy')
 
+st.header(":books: Book Identifier")
+
 k = 10
 with st.form(key='my_form'):
 	sen1 = st.text_area("Book description:")
