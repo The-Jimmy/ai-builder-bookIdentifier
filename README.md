@@ -1,2 +1,2 @@
 # ai-builder-bookidentification
-ai-builder Book Guessing proj. via BGE-m3 model
+ai-builder Book Identification proj. via BGE-m3 model
