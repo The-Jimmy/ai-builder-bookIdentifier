@@ -4,9 +4,17 @@ from FlagEmbedding import FlagReranker
 import pandas as pd
 import numpy as np
 
-model = BGEM3FlagModel('BAAI/bge-m3',
-                       use_fp16=True)
-reranker = FlagReranker('BAAI/bge-reranker-v2-m3', use_fp16=True)
+@st.cache_resource
+def load_model():
+    return BGEM3FlagModel('BAAI/bge-m3',
+                        use_fp16=True)
+
+@st.cache_resource
+def load_reranker():
+    return FlagReranker('BAAI/bge-reranker-v2-m3', use_fp16=True)
+
+model = load_model()
+reranker = load_reranker()
 
 df = pd.read_csv('D:/AI_Builder/BookDataFrame.csv')
 embeddings_2 = np.load('D:/AI_Builder/BGE_embeddings_2.npy')
