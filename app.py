@@ -8,16 +8,24 @@ import numpy as np
 def load_model():
     return BGEM3FlagModel('BAAI/bge-m3',
                         use_fp16=True)
-
 @st.cache_resource
 def load_reranker():
     return FlagReranker('BAAI/bge-reranker-v2-m3', use_fp16=True)
 
+@st.cache_data
+def load_df(path):
+    df = pd.read_csv(path)
+    return df
+@st.cache_data
+def load_embed(path):
+    embeddings_2 = np.load(path)
+    return embeddings_2
+
 model = load_model()
 reranker = load_reranker()
 
-df = pd.read_csv('D:/AI_Builder/BookDataFrame.csv')
-embeddings_2 = np.load('D:/AI_Builder/BGE_embeddings_2.npy')
+df = load_df('D:/AI_Builder/BookDataFrame.csv')
+embeddings_2 = load_embed('D:/AI_Builder/BGE_embeddings_2.npy')
 
 st.header(":books: Book Identifier")
 
