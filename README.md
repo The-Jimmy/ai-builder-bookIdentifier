@@ -1,2 +1,2 @@
-# ai-builder-bookidentification
-ai-builder Book Identification proj. via BGE-m3 model
+# ai-builder-bookIdentifier
+ai-builder Book Identifier proj. via BGE-m3 model
