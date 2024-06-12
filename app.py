@@ -32,7 +32,10 @@ st.header(":books: Book Identifier")
 
 k = 10
 with st.form(key='my_form'):
-	sen1 = st.text_area("Book description:")
+	sen1 = st.text_area(
+        label = "Book description:",
+        placeholder = "Write a brief description of your book here"
+    )
 	submit_button = st.form_submit_button(label='Submit')
 
 if submit_button:
